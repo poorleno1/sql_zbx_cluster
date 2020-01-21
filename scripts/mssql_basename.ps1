@@ -28,7 +28,7 @@ $idxI = 1
 #Задаем переменные для подключение к MSSQL. $uid и $pwd нужны для проверки подлинности windows / We define the variables for connecting to MS SQL. $uid и $pwd need to authenticate windows
 #This will append the Instane name to Hostname.
 $SQLServer = $(hostname.exe) + "\$i"
-$SQLServer = get-clusterresource -ErrorAction SilentlyContinue | where-object { $_.ResourceType -like “SQL Server” } | get-clusterparameter VirtualServerName | select -ExpandProperty value
+$SQLServer = get-clusterresource -ErrorAction SilentlyContinue | where-object { $_.ResourceType -like “SQL Server” } | get-clusterparameter VirtualServerName | Select-Object -ExpandProperty value
 
 #$uid = "Login" 
 #$pwd = "Password"
