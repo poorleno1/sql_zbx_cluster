@@ -1,4 +1,5 @@
 #функция для приведения к формату который понимает zabbix / the function is to bring to the format understands zabbix
+#
 function convertto-encoding ([string]$from, [string]$to) {
     begin {
         $encfrom = [system.text.encoding]::getencoding($from)
