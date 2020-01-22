@@ -64,7 +64,7 @@ $idx = 1
 
 #Loop through each Database from each Instance.
 foreach ($name in $basename) {       
-    $jsonlist += "{ `"{#DBNAME}`" : `"" + $name.name + "`", `"{#SQLINSTANCE}`" : `"MSSQL$" + $i + "`" }" | convertto-encoding "cp866" "utf-8"
+    $jsonlist += "{ `"{#DBNAME}`" : `"" + $name.name + "`", `"{#SQLINSTANCE}`" : `"SQLSERVER" + $i + "`" }" | convertto-encoding "cp866" "utf-8"
        
     #If not the last line, add comma.
     #Had to add extra loop per instance so that it doesn't omit after each Instance block.
